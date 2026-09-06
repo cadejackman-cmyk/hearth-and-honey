@@ -1,0 +1,28 @@
+# After GitHub Pages finishes deploying a push, clear Cloudflare's edge cache so
+# visitors see the new version right away. Needs two repository secrets:
+# CLOUDFLARE_API_TOKEN (Cache Purge permission on the zone) and CLOUDFLARE_ZONE_ID.
+name: Purge Cloudflare cache after deploy
+
+on:
+  workflow_run:
+    workflows: ["pages build and deployment"]
+    types: [completed]
+
+permissions: {}
+
+jobs:
+  purge:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Purge everything
+        env:
+          CF_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CF_ZONE: ${{ secrets.CLOUDFLARE_ZONE_ID }}
+        run: |
+          set -euo pipefail
+          response=$(curl -sS -X POST "https://api.cloudflare.com/client/v4/zones/${CF_ZONE}/purge_cache" \
+            -H "Authorization: Bearer ${CF_TOKEN}" -H "Content-Type: application/json" \
+            --data '{"purge_everything":true}')
+          echo "$response"
+          echo "$response" | grep -q '"success": *true'

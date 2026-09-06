@@ -65,6 +65,17 @@ DNS records at the domain registrar (one-time):
 
 After DNS propagates (minutes to a day), GitHub issues the certificate and `www` redirects to the apex. Then submit `https://hearthhoneybakery.com/sitemap.xml` in Google Search Console and Bing Webmaster Tools.
 
+## Caching (Cloudflare)
+
+The domain sits behind Cloudflare. Every page and asset is cached at Cloudflare's edge for a day, and fonts and images for a year. A GitHub Action (`.github/workflows/purge-cloudflare-cache.yml`) clears the edge cache automatically after each successful Pages deployment, so a push shows up within a couple of minutes. Browsers keep pages, CSS, and JS for at most 10 minutes.
+
+Two consequences:
+
+- If you overwrite an existing image or font file **under the same filename**, visitors who already have it may keep the old one for up to a year. Use a new filename instead (for example `cinnamon-rolls-2.webp`).
+- To clear the cache by hand: Cloudflare dashboard → Caching → Configuration → Purge Everything.
+
+The Action needs two repository secrets, `CLOUDFLARE_API_TOKEN` (a token with Cache Purge permission on the zone) and `CLOUDFLARE_ZONE_ID`. Both are set. If the token is ever revoked, create a new one with only "Zone → Cache Purge → Purge" and update the secret under Settings → Secrets and variables → Actions.
+
 ## Tools (optional)
 
 Node 24+ and Chrome installed. From `tools/`: `npm install` once, then:
