@@ -1,0 +1,13 @@
+{
+  "name": "Hearth & Honey Bakery",
+  "short_name": "Hearth & Honey",
+  "description": "Hand-rolled cinnamon rolls from a small-batch home bakery in Draper, Utah.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#FAF3E8",
+  "theme_color": "#C84C5A",
+  "icons": [
+    { "src": "/assets/img/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/assets/img/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

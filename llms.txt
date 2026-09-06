@@ -1,0 +1,27 @@
+# Hearth & Honey Bakery
+
+> Small-batch home bakery in Draper, Utah, run by owner and baker Megan Jackman. Known for hand-rolled cinnamon rolls made to order. Orders are placed by email (orders@hearthhoneybakery.com) or Instagram DM (@hearth.honey.bakery) and handed over at a public meet-up spot around Draper. No shipping, no online checkout, no prices published online.
+
+Key facts:
+- Business name: Hearth & Honey Bakery (also written "Hearth and Honey")
+- Owner and baker: Megan Jackman
+- Location: Draper, Utah 84020, United States (home bakery; city only)
+- Order by email: orders@hearthhoneybakery.com
+- Order by Instagram: https://www.instagram.com/hearth.honey.bakery/
+- Fulfillment: meet-up handoff at a public place around Draper; at least 2 days' notice
+- Legal: made in a home kitchen that is not licensed or inspected by the Utah Department of Agriculture and Food or a local health department (Utah Food Freedom Act)
+
+## Menu
+
+- [Cinnamon Rolls](https://hearthhoneybakery.com/menu/#cinnamon-rolls): soft dough rolled with brown sugar and cinnamon, baked golden, finished with a vanilla-cream glaze. Ingredients: flour, milk, brown sugar, heavy cream, butter, eggs, water, sugar, yeast, salt, vanilla, cinnamon. Contains wheat, milk, eggs.
+
+## Pages
+
+- [Home](https://hearthhoneybakery.com/): overview and how ordering works
+- [Menu](https://hearthhoneybakery.com/menu/): everything you can order, with ingredients and allergens
+- [Meet Megan](https://hearthhoneybakery.com/about/): about the owner
+- [Order](https://hearthhoneybakery.com/order/): order form that composes an email, Instagram DM link, FAQ
+
+## Optional
+
+- [Sitemap](https://hearthhoneybakery.com/sitemap.xml)

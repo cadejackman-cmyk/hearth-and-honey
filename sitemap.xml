@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://hearthhoneybakery.com/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <image:image>
+      <image:loc>https://hearthhoneybakery.com/assets/img/cinnamon-roll-1200.png</image:loc>
+      <image:title>Hearth &amp; Honey cinnamon roll</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://hearthhoneybakery.com/menu/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <image:image>
+      <image:loc>https://hearthhoneybakery.com/assets/img/cinnamon-roll-1200.png</image:loc>
+      <image:title>Cinnamon Rolls</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://hearthhoneybakery.com/about/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <image:image>
+      <image:loc>https://hearthhoneybakery.com/assets/img/megan-portrait-800.jpg</image:loc>
+      <image:title>Megan Jackman, owner and baker</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://hearthhoneybakery.com/order/</loc>
+    <lastmod>2026-09-06</lastmod>
+  </url>
+</urlset>
