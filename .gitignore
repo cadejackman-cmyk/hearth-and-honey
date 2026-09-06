@@ -1,0 +1,4 @@
+tools/node_modules/
+tools/reports/
+.DS_Store
+Thumbs.db
