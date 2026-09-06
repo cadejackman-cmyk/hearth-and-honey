@@ -411,6 +411,7 @@ legend { font-family: var(--font-display); font-size: var(--step-2); font-weight
 .prose h3 { margin-top: var(--space-3); }
 .prose ul { padding-left: 1.25em; }
 .prose li { margin-bottom: 0.5em; }
+.prose code { font-size: 0.95em; padding: 0 0.3em; background: var(--cream-2); border-radius: 0.3em; }
 .not-found { text-align: center; padding-block: var(--space-6); }
 .not-found img { width: min(100%, 16rem); margin: 0 auto var(--space-3); transform: rotate(12deg); }
 .not-found p { margin-inline: auto; }

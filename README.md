@@ -17,6 +17,7 @@ Plain HTML, one CSS file, two small scripts. There is no build step: edit a file
 | `assets/css/site.css` | All styling. Colors and type sizes are variables at the top. |
 | `assets/js/order-mail.js` | Order email logic: item list, lead time, subject/body |
 | `assets/js/order.js`, `assets/js/site.js` | Form behavior, mobile nav |
+| `assets/js/analytics.js` | Google Analytics 4 config (tag ID lives here) |
 | `assets/img/` | Logo, illustrations, photos, social image, icons |
 | `assets/fonts/` | Self-hosted fonts |
 | `robots.txt`, `sitemap.xml`, `llms.txt`, `site.webmanifest` | Search-engine and AI-crawler files |
@@ -35,6 +36,8 @@ Plain HTML, one CSS file, two small scripts. There is no build step: edit a file
 **Expand Megan's bio.** `about/index.html`, look for the `BIO` comment.
 
 **Change the lead time.** `LEAD_DAYS` in `assets/js/order-mail.js`, and the "2 days' notice" text in `order/index.html` (hint, FAQ, and the FAQPage JSON near the top) and in the notes on `menu/index.html`.
+
+**Analytics.** Google Analytics (GA4, property G-DCZV25M028) is loaded from every page's `<head>`. Removing it means deleting the `<script>` tag that loads `analytics.js` in each page, deleting `assets/js/analytics.js`, and updating the privacy notice on `/policies/`. Cloudflare's content-security policy allows Google's analytics domains; if Google adds new ones (for example when Google Signals is turned on), add them to the header rule in Cloudflare.
 
 **Prices.** There are none by design. If you add them later, put them in the card body and in the `Product` JSON-LD as an `offers` block.
 
