@@ -178,8 +178,10 @@ main:focus { outline: none; }
   background: transparent; color: var(--red); cursor: pointer;
 }
 .nav-toggle svg { width: 1.375rem; height: 1.375rem; }
-.nav-toggle[aria-expanded="true"] .icon-open,
-.nav-toggle[aria-expanded="false"] .icon-close { display: none; }
+.nav-toggle .bar { transform-box: fill-box; transform-origin: center; transition: transform 0.28s var(--ease), opacity 0.2s var(--ease); }
+.nav-toggle[aria-expanded="true"] .bar--top { transform: translateY(5px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] .bar--mid { opacity: 0; transform: scaleX(0.2); }
+.nav-toggle[aria-expanded="true"] .bar--bot { transform: translateY(-5px) rotate(-45deg); }
 .site-nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.25rem; }
 .site-nav li { margin: 0; }
 .site-nav a {
@@ -193,14 +195,25 @@ main:focus { outline: none; }
 .site-nav .button:hover { color: #fff; background: var(--red-deep); }
 @media (max-width: 47.99em) {
   .js .site-nav {
-    display: none;
     position: absolute; left: calc(-1 * var(--gutter)); right: calc(-1 * var(--gutter)); top: 100%;
     padding: var(--space-2) var(--gutter) var(--space-3);
     background: var(--cream);
     border-bottom: 1px solid var(--line);
     box-shadow: var(--shadow);
+    opacity: 0; visibility: hidden; pointer-events: none;
+    transform: translateY(-0.75rem);
+    transition: opacity 0.22s var(--ease), transform 0.28s var(--ease), visibility 0s linear 0.28s;
   }
-  .js .site-nav.is-open { display: block; }
+  .js .site-nav.is-open {
+    opacity: 1; visibility: visible; pointer-events: auto;
+    transform: none;
+    transition: opacity 0.22s var(--ease), transform 0.28s var(--ease), visibility 0s;
+  }
+  .js .site-nav li { opacity: 0; transform: translateY(-0.5rem); transition: opacity 0.25s var(--ease), transform 0.3s var(--ease); }
+  .js .site-nav.is-open li { opacity: 1; transform: none; }
+  .js .site-nav.is-open li:nth-child(2) { transition-delay: 0.05s; }
+  .js .site-nav.is-open li:nth-child(3) { transition-delay: 0.1s; }
+  .js .site-nav.is-open li:nth-child(4) { transition-delay: 0.15s; }
 }
 @media (min-width: 48em) {
   .nav-toggle { display: none; }
@@ -226,6 +239,8 @@ main:focus { outline: none; }
 .button--light:hover { background: var(--paper); color: var(--red-deep); }
 .button svg { width: 1.25em; height: 1.25em; flex: none; }
 .cta-row { display: flex; flex-wrap: wrap; gap: var(--space-2); align-items: center; }
+.cta-row--after { margin-top: var(--space-4); }
+.hint--inline { margin: 0; }
 
 /* 7 · Hero */
 .hero { position: relative; background: var(--paper); padding-block: var(--space-5) calc(var(--space-6) + 1rem); }
@@ -311,11 +326,10 @@ main:focus { outline: none; }
 @media (min-width: 48em) { .baker { grid-template-columns: minmax(14rem, 22rem) 1fr; } }
 .baker__photo {
   width: min(100%, 20rem); margin-inline: auto;
-  border-radius: 58% 42% 55% 45% / 45% 55% 45% 55%;
+  border-radius: 50%;
   overflow: hidden;
   border: 6px solid var(--paper);
   box-shadow: var(--shadow);
-  transform: rotate(-2deg);
 }
 .baker__photo img { aspect-ratio: 1; object-fit: cover; }
 
@@ -388,11 +402,15 @@ legend { font-family: var(--font-display); font-size: var(--step-2); font-weight
 .page-hero p:last-child { margin-bottom: 0; }
 .about { display: grid; gap: var(--space-4); align-items: start; }
 @media (min-width: 48em) { .about { grid-template-columns: minmax(16rem, 24rem) 1fr; } }
-.about__photo { border-radius: var(--radius); overflow: hidden; border: 6px solid var(--paper); box-shadow: var(--shadow); transform: rotate(-1.5deg); }
-.about__photo img { aspect-ratio: 3 / 4; object-fit: cover; }
+.about__photo { width: min(100%, 22rem); margin-inline: auto; border-radius: 50%; overflow: hidden; border: 6px solid var(--paper); box-shadow: var(--shadow); }
+.about__photo img { aspect-ratio: 1; object-fit: cover; }
 .about h2 { font-size: var(--step-2); margin-top: var(--space-3); }
 .notes { display: grid; gap: var(--space-2); padding: var(--space-3); background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); }
 .notes p { margin: 0; }
+.prose h2 { font-size: var(--step-3); }
+.prose h3 { margin-top: var(--space-3); }
+.prose ul { padding-left: 1.25em; }
+.prose li { margin-bottom: 0.5em; }
 .not-found { text-align: center; padding-block: var(--space-6); }
 .not-found img { width: min(100%, 16rem); margin: 0 auto var(--space-3); transform: rotate(12deg); }
 .not-found p { margin-inline: auto; }

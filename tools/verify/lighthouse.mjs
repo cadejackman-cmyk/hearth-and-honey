@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url';
 import { startServer } from '../serve.mjs';
 
 const TARGETS = { performance: 95, accessibility: 100, 'best-practices': 95, seo: 100 };
-const PAGES = ['/', '/menu/', '/about/', '/order/'];
+const PAGES = ['/', '/menu/', '/about/', '/order/', '/policies/'];
 const REPORTS = fileURLToPath(new URL('../reports/', import.meta.url));
 mkdirSync(REPORTS, { recursive: true });
 

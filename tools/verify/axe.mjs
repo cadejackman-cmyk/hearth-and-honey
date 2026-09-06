@@ -3,7 +3,7 @@ import { chromium } from 'playwright-core';
 import AxeBuilder from '@axe-core/playwright';
 import { startServer } from '../serve.mjs';
 
-const PAGES = ['/', '/menu/', '/about/', '/order/', '/404.html'];
+const PAGES = ['/', '/menu/', '/about/', '/order/', '/policies/', '/404.html'];
 const TAGS = ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa', 'best-practice'];
 const { url, close } = await startServer();
 const browser = await chromium.launch({ channel: 'chrome', headless: true });

@@ -135,8 +135,11 @@
   <div class="wrap site-header__inner">
     <a class="brand" href="/"><img src="/assets/img/logo.svg" alt="Hearth &amp; Honey" width="160" height="64"></a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-      <svg class="icon-open" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-      <svg class="icon-close" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      <svg class="nav-toggle__icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+        <path class="bar bar--top" d="M4 7h16"/>
+        <path class="bar bar--mid" d="M4 12h16"/>
+        <path class="bar bar--bot" d="M4 17h16"/>
+      </svg>
       <span class="visually-hidden">Site navigation</span>
     </button>
     <nav id="site-nav" class="site-nav" aria-label="Site">
@@ -210,7 +213,7 @@
         <p><strong>Pickup.</strong> Orders are handed over at a public meet-up spot around Draper, Utah. There is no shipping.</p>
         <p><strong>Utah Food Freedom Act.</strong> Made in a home kitchen that is not licensed or inspected by the Utah Department of Agriculture and Food or a local health department.</p>
       </div>
-      <div class="cta-row" style="margin-top: var(--space-4)">
+      <div class="cta-row cta-row--after">
         <a class="button button--primary" href="/order/">Start an order</a>
         <a class="button button--secondary" href="https://ig.me/m/hearth.honey.bakery">Message on Instagram</a>
       </div>
@@ -244,8 +247,7 @@
     </div>
     <div class="site-footer__small">
       <p>Made in a home kitchen that is not licensed or inspected by the Utah Department of Agriculture and Food or a local health department.</p>
-      <p>© 2026 Hearth &amp; Honey Bakery. Made with butter, cinnamon, and a lot of care.</p>
-      <p><a href="/sitemap.xml">Sitemap</a></p>
+      <p>© 2026 Hearth &amp; Honey Bakery. Made with butter, cinnamon, and a lot of care. <a href="/policies/">Privacy, accessibility, and ordering terms</a>.</p>
     </div>
   </div>
 </footer>

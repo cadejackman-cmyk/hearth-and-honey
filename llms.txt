@@ -21,6 +21,7 @@ Key facts:
 - [Menu](https://hearthhoneybakery.com/menu/): everything you can order, with ingredients and allergens
 - [Meet Megan](https://hearthhoneybakery.com/about/): about the owner
 - [Order](https://hearthhoneybakery.com/order/): order form that composes an email, Instagram DM link, FAQ
+- [Policies](https://hearthhoneybakery.com/policies/): privacy notice, accessibility statement, ordering terms
 
 ## Optional
 

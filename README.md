@@ -12,6 +12,7 @@ Plain HTML, one CSS file, two small scripts. There is no build step: edit a file
 | `menu/index.html` | Menu |
 | `about/index.html` | Meet Megan |
 | `order/index.html` | Order form + FAQ |
+| `policies/index.html` | Privacy notice, accessibility statement, ordering terms |
 | `404.html` | Not-found page |
 | `assets/css/site.css` | All styling. Colors and type sizes are variables at the top. |
 | `assets/js/order-mail.js` | Order email logic: item list, lead time, subject/body |
@@ -46,6 +47,7 @@ Copy that was written as a safe default and is easy to change:
 - "Everything is made in a home kitchen that also handles nuts and other allergens" (Menu notes).
 - "A reply from Megan herself, usually within a day" and "never from a freezer case" (About).
 - "Why Hearth & Honey" wording (About).
+- Ordering terms on `/policies/`: cancellation and refund rules are deliberately not stated; add them once Megan decides. Update the "Last updated" date when you change any policy text.
 
 ## Publishing and the domain
 

@@ -18,6 +18,7 @@ const PAGES = {
   'menu/index.html': ['Bakery', 'Person', 'WebSite', 'WebPage', 'BreadcrumbList', 'Menu', 'Product'],
   'about/index.html': ['Bakery', 'Person', 'WebSite', 'WebPage', 'BreadcrumbList'],
   'order/index.html': ['Bakery', 'Person', 'WebSite', 'WebPage', 'BreadcrumbList', 'FAQPage'],
+  'policies/index.html': ['Bakery', 'Person', 'WebSite', 'WebPage', 'BreadcrumbList'],
 };
 
 let failed = 0;
